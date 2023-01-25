@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="/home/index"><h1>TripNestor</h1></a>
+    </header>
+    <div class="page-body">
+        <div class="filter">
+            <div class="fil-item">
+                <label>Check in</label>
+                <input class="fil-input" type="date" name="checkin" />
+            </div>
+            <div class="fil-item">
+                <label>Check out</label>
+                <input class="fil-input" type="date" name="check out" />
+            </div>
+            <div class="fil-item">
+                <label>Guests</label>
+                <input class="fil-input" type="text" name="guests" />
+            </div>
+            <div class="fil-item">
+                <label>Rooms</label>
+                <input class="fil-input" type="text" name="rooms" />
+            </div>
+            <div class="fil-item">
+                <img src="~/images/search-solid.svg" alt="search" />
+            </div>
+        </div>
+        <div class="container" id="container"></div>
+    </div>
+
+    <script>
+      const contianer = document.getElementById("container");
+
+      for (let i = 0; i < 10; i++) {
+        const content = `
+            <div class="card">
+          <div class="card-img">
+            <img src="../images/panoramic-suite.jpg" alt="room picture" />
+          </div>
+          <div class="card-body">
+            <p class="room-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae reprehenderit minus quo delectus quasi assumenda nam, numquam aperiam.</p>
+            <button class="booking-btn">Book Now</button>
+          </div>
+        </div>
+            `;
+        contianer.innerHTML += content;
+      }
+    </script>
+</body>
+</html>
+

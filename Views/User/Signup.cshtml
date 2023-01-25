@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" />
+    <title>TripNestor</title>
+</head>
+<body id="main-page" class="main-page">
+    <a class="logo" href="/home/index"><h1>TripNestor</h1></a>
+    <div class="signup-page">
+        <div class="signup-form">
+            <h1>TripNestor</h1>
+            <form onsubmit="return validateForm()" name="form">
+                <div class="input-field">
+                    <label>Name</label>
+                    <input type="text" value="" name="name" />
+                </div>
+                <div class="input-field">
+                    <label>Email</label>
+                    <input type="email" value="" name="mail" />
+                </div>
+                <div class="input-field">
+                    <label>Confirm Email</label>
+                    <input type="email" value="" name="cmail" />
+                </div>
+                <div class="input-field">
+                    <label>Password</label>
+                    <input type="password" value="" name="password" />
+                </div>
+                <div class="input-field">
+                    <label>Confirm Password</label>
+                    <input type="password" value="" name="cpassword" />
+                </div>
+                <p id="alert"></p>
+                <button class="sub-btn" id="btn" type="submit">Sign Up</button>
+            </form>
+            <span class="link-signin"><a href="/user/signin">Already have an account?</a></span>
+        </div>
+    </div>
+
+    <!--  <script>
+          function validateForm() {
+              event.preventDefault();
+              let uname = document.forms["form"]["name"].value;
+              let email = document.forms["form"]["mail"].value;
+              let cemail = document.forms["form"]["cmail"].value;
+              let password = document.forms["form"]["password"].value;
+              let cpassword = document.forms["form"]["cpassword"].value;
+
+              if (uname && email && cemail && password && cpassword) {
+                  if (email != cemail && password === cpassword) {
+                      document.getElementById("alert").innerText = "Emails are not same";
+                      return false;
+                  } else if (email === cemail && password != cpassword) {
+                      document.getElementById("alert").innerText =
+                          "Passwords are not same";
+                      return false;
+                  } else if (email != cemail && password != cpassword) {
+                      document.getElementById("alert").innerText =
+                          "Emails and passwords are not same";
+                      return false;
+                  }
+                  document.getElementById("alert").innerText = "";
+                  const attr = document.createAttribute("disabled");
+                  attr.value = "true";
+                  document.getElementById("btn").setAttributeNode(attr);
+                  return true;
+              } else {
+                  document.getElementById("alert").innerText = "Please fill the form";
+                  return false;
+              }
+          }
+      </script>-->
+</body>
+</html>
