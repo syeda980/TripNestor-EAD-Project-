@@ -19,17 +19,19 @@
         </div>
     }
     @*else
-    {
-        <div>
-            <h1>@ViewBag.Message </h1>
-        </div>
+        {
+            <div>
+                <h1>@ViewBag.Message </h1>
+            </div>
 
-    }*@
+        }*@
     @if (ViewBag.invalid == true)
     {
-<div style="position: fixed; top: 0; right: 5rem; background-color: red;">
-    <p style="font-family:Arima,cursive">@ViewBag.invalidmsg</p>
-    <span class="closebtn" style="position: absolute; top: 0; right: 0; margin: 0px 10px; font-size: 24px; font-weight: bold; color: #fff;" onclick="this.parentElement.style.display='none';">&times;</span>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>@ViewBag.invalidmsg</strong>
+    <span onclick="this.parentElement.style.display='none'" ; style="font-size:1rem">&times;</span>
+
 </div>
     }
     <div class="container" id="container" style="margin-top: 2rem">
@@ -74,7 +76,7 @@
     </div>
     <div class="MobileDisplay" id="MobileDisplay">
         <div class="container-fluid">
-            <form method="POST" style="height: 26rem;">
+            <form method="POST" style="height: 26rem;"action="/user/Login">
                 <h1 style="color:white">TripNestor </h1>
                 <div class="form-group">
                     <input type="email" class="form-control" placeholder="Email" name="email">

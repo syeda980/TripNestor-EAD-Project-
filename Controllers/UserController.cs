@@ -54,7 +54,7 @@ namespace TripNestor.Controllers
             }
             else
             {
-                ViewBag.invalidmsg = "Invalid Username or password";
+                ViewBag.invalidmsg = "Invalid Email or password";
                 ViewBag.flag = false;
                 ViewBag.invalid = true;
                 //ModelState.Clear();//clear the fields

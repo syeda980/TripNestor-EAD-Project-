@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TripNestor.Models
 {
-    public partial class User
+    public partial class User 
     {
         public int Id { get; set; }
         [Required]

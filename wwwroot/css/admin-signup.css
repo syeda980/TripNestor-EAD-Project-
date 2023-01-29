@@ -15,7 +15,10 @@ body {
     height: 100vh;
     margin: 0px 0px 50px;
 }
-
+.btn-close
+{
+    border-radius:0px
+}
 #logo {
     width: 14rem;
     /* display: block; */

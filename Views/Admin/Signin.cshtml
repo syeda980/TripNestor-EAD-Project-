@@ -14,15 +14,25 @@
     <title>AdminSignIn</title>
 </head>
 <body>
-  
+
+    @if (ViewBag.invalid == true)
+    {
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>@ViewBag.invalidmsg</strong>
+            <span onclick="this.parentElement.style.display='none'"style="font-size:1rem" ;>&times;</span>
+
+        </div>
+    }
+
     <div class="container" id="container">
         <div class="form-container">
-            <form method="POST">
+            <form method="POST"action="/admin/Login">
                 <h1>Sign in</h1>
                 <input type="email" placeholder="Email" name="email" />
                 <input type="password" placeholder="Password" name="password" />
-@*                <a href="/forgotPassword"> <u> Forgot your password?</u></a>
-*@                <button id="SIGNIN" type="submit" name="submit">Sign In</button>
+                @*                <a href="/forgotPassword"> <u> Forgot your password?</u></a>
+                *@                <button id="SIGNIN" type="submit" name="submit">Sign In</button>
             </form>
         </div>
 
@@ -42,11 +52,11 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-right">
-                   <h1>TripNestor</h1>
+                    <h1>TripNestor</h1>
                     <p class="text-break text-wrap text-center" style=" color: #FFFFFF;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Fusce a feugiat nulla, vel efficitur augue. 
-                        Mauris blandit mauris ut lorem interdum volutpat. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Fusce a feugiat nulla, vel efficitur augue.
+                        Mauris blandit mauris ut lorem interdum volutpat.
                         Fusce semper urna.
                     </p>
                 </div>
@@ -55,8 +65,8 @@
     </div>
     <div class="MobileDisplay" id="MobileDisplay">
         <div class="container-fluid">
-            <form method="POST" style="height: 26rem;">
-                <img class="img-responsve" style="height: 9rem;" src="static/images/logo1.1.png" alt="" srcset="">
+            <form method="POST" style="height: 26rem;"action="/admin/Login">
+                <h1 style="color:white">TripNestor </h1>
                 <div class="form-group">
                     <input type="email" class="form-control" placeholder="Email" name="email">
                 </div>
