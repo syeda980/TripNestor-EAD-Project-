@@ -1,61 +1,4 @@
-﻿<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/style.css" />
-
-    <title>Travel</title>
-</head>
-<body id="main-page" class="main-page">
-    <a class="logo" href="/home/index"><h1>Travel</h1></a>
-    <div class="signup-page">
-        <div class="signup-form">
-            <h1>Travel</h1>
-            <form name="form" onsubmit="return validateForm()">
-                <div class="input-field">
-                    <label>Email</label>
-                    <input type="email" name="mail" />
-                </div>
-                <div class="input-field">
-                    <label>Password</label>
-                    <input type="password" name="password" />
-                </div>
-                <p id="alert"></p>
-                <button class="sub-btn" id="btn" type="submit">Sign In</button>
-            </form>
-            <span>
-                <a class="link-signin" href="/user/SignUp">Create an account</a>
-            </span>
-        </div>
-    </div>
-
-    <script>
-      function validateForm() {
-        event.preventDefault();
-
-        let email = document.forms["form"]["mail"].value;
-        let password = document.forms["form"]["password"].value;
-        console.log("here");
-        if (email && password) {
-          const attr = document.createAttribute("disabled");
-          attr.value = "true";
-          document.getElementById("btn").setAttributeNode(attr);
-          document.getElementById("alert").innerText = "";
-          return true;
-        } else {
-          document.getElementById("alert").innerText =
-            "Invalid user name or password";
-          return false;
-        }
-      }
-    </script>
-</body>
-</html>-->
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,13 +12,29 @@
     <title>LOGIN/SIGNUP</title>
 </head>
 <body>
-   @* {% if flag==True %}
-    <h1>{{msg}}</h1>
-    {% endif %}
-   *@ 
+    @if (@ViewBag.flag == true)
+    {
+        <div>
+            <h1>@ViewBag.Message </h1>
+        </div>
+    }
+    @*else
+    {
+        <div>
+            <h1>@ViewBag.Message </h1>
+        </div>
+
+    }*@
+    @if (ViewBag.invalid == true)
+    {
+<div style="position: fixed; top: 0; right: 5rem; background-color: red;">
+    <p style="font-family:Arima,cursive">@ViewBag.invalidmsg</p>
+    <span class="closebtn" style="position: absolute; top: 0; right: 0; margin: 0px 10px; font-size: 24px; font-weight: bold; color: #fff;" onclick="this.parentElement.style.display='none';">&times;</span>
+</div>
+    }
     <div class="container" id="container" style="margin-top: 2rem">
         <div class="form-container sign-up-container">
-            <form  method="post">
+            <form method="post" action="/user/AddUserToDB">
                 <h1>Create Account</h1>
                 <input type="text" placeholder="Name" name="userName" />
                 <input type="email" placeholder="Email" name="userEmail" />
@@ -83,15 +42,16 @@
                 <button id="SIGNUP" type="submit" name="submit">Sign Up</button>
             </form>
         </div>
+
         <div class="form-container sign-in-container">
             <!--                            <button id="backBtn" type="submit"onclick="history.back()">&larr;</button>-->
-            <form  method="POST">
+            <form method="POST" action="/user/Login">
 
                 <h1>Sign in</h1>
                 <input type="email" placeholder="Email" name="email" />
                 <input type="password" required placeholder="Password" name="password" />
-                <a href="/forgotPassword"> <u> Forgot your password?</u></a>
-                <button id="SIGNIN" type="submit" name="submit">Sign In</button>
+                @*                <a href="/forgotPassword"> <u> Forgot your password?</u></a>
+                *@                <button id="SIGNIN" type="submit" name="submit">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -102,7 +62,7 @@
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1 >TripNestor</h1>
+                    <h1>TripNestor</h1>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
                     </p>
@@ -114,8 +74,8 @@
     </div>
     <div class="MobileDisplay" id="MobileDisplay">
         <div class="container-fluid">
-            <form  method="POST" style="height: 26rem;">
-                <h1 style="color:white">TripNestor </h1>     
+            <form method="POST" style="height: 26rem;">
+                <h1 style="color:white">TripNestor </h1>
                 <div class="form-group">
                     <input type="email" class="form-control" placeholder="Email" name="email">
                 </div>
@@ -132,8 +92,8 @@
         </div>
     </div>
 
-@*    {% if flag1==True %}
-*@    <div class="MobileDisplaySignUp" id="smallscreen">
+    @*    {% if flag1==True %}
+    *@    <div class="MobileDisplaySignUp" id="smallscreen">
         <div class="container-fluid ">
             <form method="POST" style="height: 26rem;">
                 <h1 style="color:white">TripNestor</h1>
@@ -150,7 +110,7 @@
                 <!--        <div class="dropdown-divider"></div>-->
 
             </form>
-         @*   {% endif %}*@
+            @*   {% endif %}*@
         </div>
     </div>
 
