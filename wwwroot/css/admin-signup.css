@@ -19,16 +19,9 @@ body {
 {
     border-radius:0px
 }
-#logo {
-    width: 14rem;
-    float: left;
-    align-items: center;
-    margin-left: 0px;
-    margin-bottom: 0px;
-}
 
 h1 {
-    font-family:  sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
     margin: 0;
 }

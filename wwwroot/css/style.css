@@ -1,429 +1,203 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  line-height: 0.8rem;
-}
-
-.signup-page {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.comp-form {
-  display: flex;
-  flex-direction: row;
-  background-color: #799f0c;
-}
-
-.signup-form {
-  background-color: white;
-  padding: 20px;
-  align-items: center;
-}
-
-h1 {
-  text-align: center;
-  padding: 30px;
-}
-
-.form-left {
-  max-width: 400px;
-  width: 100%;
-  padding: 30px;
-}
-
-.left-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-content h1 {
-  color: white;
-}
-
-.left-content p {
-  color: white;
-  text-align: center;
-  font-size: 0.8rem;
-  line-height: 1.3rem;
-}
-
-.round-img img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.input-field label {
-  display: block;
-  margin-bottom: 3px;
-  font-weight: 600;
-  font-size: 0.8em;
-}
-
-.input-field input {
-  min-width: 300px;
-  height: 30px;
-  border: 2px solid grey;
-  border-radius: 5px;
-  padding: 3px;
-}
-
-.input-field input:hover {
-  border-color: black;
-}
-
-.input-field input:focus {
-  border-color: black;
-}
-
-.input-field {
-  margin-bottom: 15px;
-}
-
-.input-radio {
-  margin-bottom: 15px;
-}
-
-.input-radio input {
-  margin-bottom: 10px;
-}
-
-.input-radio label {
-  font-weight: 600;
-  font-size: 0.8em;
-}
-
-.sub-btn {
-  padding: 5px 10px;
-  font-weight: 400;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  width: 100%;
-  height: 40px;
-  margin-top: 10px;
-}
-
-.sub-btn:hover {
-  color: black;
-  background-color: grey;
-  border-color: grey;
-}
-
-.link-signin {
-  display: block;
-  margin: 5px;
-  text-decoration: none;
-  color: black;
-  font-size: 0.7em;
-  font-weight: 600;
-}
-
-a:hover {
-  color: rgb(86, 86, 86);
-}
-
-p {
-  color: red;
+    padding: 0px;
+    !important margin: 0px;
+    !important box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 .header {
-  height: 70px;
-  background-color: black;
-  display: flex;
-  align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.logo {
-  color: white;
-  float: left;
-  text-decoration: none;
-  margin-left: 10px;
+body {
+    background-color: white;
+    background-image:url("../images/low-opacity-wallpaper.jpg");
+    background-size:cover;
 }
 
-.page-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 100px;
+header {
+    height: 90px;
+    display: flex;
+    background-color: #0b0c0c;
+    width: 100%;
 }
 
-.user-page-body {
-  background-color: #fffaec;
+
+#headerH2 {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #ee9720;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  gap: 30px;
-}
 
-.filter {
-  display: flex;
-  max-width: 1200px;
-  margin-bottom: 50px;
-  border-radius: 50px;
-  padding: 0px 50px;
-  background: linear-gradient(to bottom right, #ffe000, #799f0c);
-}
 
-.fil-item {
-  margin: 10px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.fil-item img {
-  color: white;
-  height: 25px;
-  padding: 10px;
-}
-
-.fil-item img:hover {
-  background-color: rgb(255, 255, 255);
-}
-
-.fil-item label {
-  font-size: 0.8em;
-  font-weight: 600;
-  color: white;
-  font-weight: 600;
-}
-
-.fil-input {
-  width: 120px;
-  border: none;
-  margin-top: 5px;
-  padding: 5px;
-}
-
-.add-room-btn {
-  color: white;
-  background: linear-gradient(to bottom right, #ffe000, #799f0c);
-  border: none;
-  margin-bottom: 15px;
-  padding: 10px 15px;
-  font-weight: 600;
-}
-
-.add-room-btn:hover {
-  background: antiquewhite;
-  border: 2px solid #799f0c;
-  color: #799f0c;
-}
-
-.plus-sign {
-  height: 15px;
-  width: 15px;
-  margin-left: 2px;
-  font-size: 1.1rem;
-  font-weight: 800;
-}
-
-.card {
-  max-width: 300px;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 1px 1px 15px 1px #888888;
-  background-color: white;
-}
-
-.card-body {
-  padding: 10px;
-}
-
-.card-img img {
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-}
-
-.room-desc {
-  color: grey;
-  font-size: 0.6em;
-  max-width: 80%;
-}
-
-.booking-btn {
-  font-size: 0.7em;
-  background: none;
-  color: black;
-  border: none;
-  text-decoration: underline;
-  font-weight: 500;
-  margin-top: 10px;
-}
-
-.booking-btn:hover {
-  color: grey;
-}
-
-.main-page {
-/*    background-image: url("../images/pexels-leonardo-rossatti-2598638.jpg");
-*/    background-image: url("../images/wallpaper.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    max-width: 100%;
-}
-
-.backg-grad {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: linear-gradient(
-    to bottom right,
-    #ffe000,
-    transparent,
-    #799f0c
-  );
-  opacity: 0.9;
-}
-
-.mheader {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  z-index: 1;
-}
-
-.mheader-userpage {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  background: linear-gradient(to bottom right, #ffe000, #799f0c);
-  width: 100%;
-  z-index: 1;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
+.navbar1 {
+    background-color: #0b0c0c;
 }
 
 .navbar ul {
-  display: flex;
-  list-style: none;
-  margin-right: 50px;
+    /* overflow: auto;*/
 }
 
-.navbar ul li a {
-  list-style: none;
-  color: white;
-  font-weight: 600;
-  padding: 5px 10px;
+#navbarlist {
+    /* display: flex; */
+    display: flex;
+    list-style: none;
+    padding-left: 80px;
+    float: left;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    /*    font-family: 'Arima', cursive;
+*/
 }
 
-.navbar ul li a:hover {
-  border-bottom: 1px solid #ffe000;
+    #navbarlist li {
+        /*padding: 18px;*/
+        float: left;
+        display: flex;
+    }
+
+   #navbarlist li a {
+       padding: 18px;
+            /*padding: 10px;*/
+           /* float: left;  */
+   }
+
+   #navbarlist li:hover {
+            background-color: rgb(84, 74, 56);
+   }
+
+   #navbarlist li a:hover {
+            color: #ee9720;
+   }
+
+   #navbarlist a:visited {
+        text-decoration: none;
+        color: white;
+   }
+
+.form-inline .btn {
+    margin-left: 5rem;
 }
 
-a {
-  text-decoration: none;
+.btn1 {
+    margin-left: -21px;
 }
 
+
+button:hover, #Icon:hover, #logout:hover, #suggestionbutton a:hover {
+    /* background-color: #ee9720 ; */
+    /* color: #154962 ; */
+    color: #ee9720;
+}
 .signup-btn {
     color: white;
     background-color: black;
     border: 2px solid white;
+    height: 2rem;
     border-radius: 14px;
     padding: 5px 10px;
-    height: 15px;
+    height: 2rem;
     text-decoration: none;
     font-size: 0.8em;
-    margin-right: 20px;
+    position: fixed;
+    right: 1rem;
+    margin-top: 0.6rem;
+}
+footer {
+    padding-left: 9px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.signup-btn:hover {
-  background-color: black;
-  color: white;
+#copyright {
+    margin: auto;
+    margin-right: 0px;
+    text-align: center;
 }
 
-.main-content {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  width: 100%;
-  color: #799f0c;
+a {
+    color: black;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
 }
 
-.main-content div {
-  position: absolute;
-  top: 170px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  height: 200px;
+.main-content .mc-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1000px;
+   
+}
+.mc-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
 }
 
+.mc-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 300px;
+}
 .main-line {
-  font-size: 3.5em;
-  font-weight: 600;
-  color: rgb(255, 255, 255);
-  word-wrap: break-word;
-  text-align: center;
-  padding: 0px 50px;
+    font-size: 6.5vw;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    padding: 0px 50px;
+    margin-bottom: 1rem;
 }
 
 .main-desc {
-  text-align: center;
-  max-width: 650px;
-  font-weight: 400;
-  font-size: 1.2em;
-  line-height: 1.3em;
-  color: rgb(255, 255, 255);
-  padding: 0px 50px;
+    max-width: 550px;
+    font-weight: 300;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    color:black;
+    padding: 0px 50px;
 }
 
-.main-btn {
-  background-image: linear-gradient(to bottom right, #ffe000, #799f0c);
-  color: white;
-
-  padding: 15px 25px;
-  font-weight: 600;
-  font-size: 1em;
-  text-decoration: none;
+#footerBG {
+    background-color: rgb(219, 209, 190);
 }
 
-.main-btn:hover {
-  background-color: white;
-  color: black;
+#copyright h5 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.admin-btn {
-  margin: 10px 0px;
+#copyright p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
-.admin-btn img {
-  width: 20px;
-  height: 20px;
-  padding: 5px 10px;
-}
 
-.admin-btn .delete-btn:hover,
-.edit-btn:hover {
-  background-image: linear-gradient(to bottom right, #ffe000, #799f0c);
-  padding: 5px 10px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

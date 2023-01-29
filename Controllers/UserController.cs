@@ -51,18 +51,31 @@ namespace TripNestor.Controllers
                 //cookies management 
                 HttpContext.Response.Cookies.Append("userEmail",user.Email);
                 HttpContext.Response.Cookies.Append("userPassword", user.Password);
-                return View("userHome");
+                return View("userHome","user");
             }
             else
             {
                 ViewBag.invalidmsg = "Invalid Email or password";
                 ViewBag.flag = false;
                 ViewBag.invalid = true;
-                //ModelState.Clear();//clear the fields
                 return View("signin");
 
             }
 
+        }
+        public ViewResult userHome()
+        {
+            if (HttpContext.Request.Cookies.ContainsKey("userEmail")
+                && HttpContext.Request.Cookies.ContainsKey("userPassword"))
+            {
+                return View("userHome");
+            }
+            else
+            {
+                ViewBag.invalidmsg = "Please Log in first to proceed further";
+                ViewBag.invalid = true;
+                return View("signin");
+            }
         }
 
     }

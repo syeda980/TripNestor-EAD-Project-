@@ -1,84 +1,60 @@
-﻿@*<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
-              rel="stylesheet" />
-        <link rel="stylesheet" href="~/css/style.css" />
-        <title>TripNestor</title>
-    </head>
-
-    <body id="main-page" class="main-page">
-
-        <div class="mheader">
-            <h1 class="logo">TripNestor</h1>
-            <a href="/user/signup" class="signup-btn">SIGN UP</a>
-        </div>
-        <div class="main-content">
-            <div>
-                <span class="main-line">Live In Your Dream Space</span></br>
-                <a href="/home/userHome" class="main-btn">BOOK A ROOM</a>
-            </div>
-        </div>
-
-        <script>
-            const mainPage = document.getElementById("main-page");
-            const height = window.innerHeight;
-            mainPage.style.height = height;
-            console.log(height);
-        </script>
-
-    </body>
-    </html>
-
-
+﻿@*@{ Layout = "~/Views/Shared/_Layout.cshtml";}
 *@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
-          rel="stylesheet" />
-    <link rel="stylesheet" href="~/css/style.css" />
-    <title>Document</title>
-</head>
-
-<body id="main-page" class="main-page">
+@{ Layout = "_Layout";}
+@*<body id="main-page" class="main-page">
     <div class="backg-grad"></div>
     <div class="mheader">
-        <a class="logo" href="/home/Index"><h1>TripNestor</h1></a>
-        <div class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
-            <a style="color:white" href="/home/welcome" class="signup-btn">SIGN IN</a>
-        </div>
-    </div>
-    <div class="main-content">
-        <div>
-            <span class="main-line">Live In Your Dream Space</span><br>
+
+    </div>*@
+
+@*    </div>
+*@    
+<div class="main-content backg-grad">
+    <div class="mc-container">
+        <div class="mc-left">
+            <span class="main-line">TripNestor</span>
             <p class="main-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis a nisi repudiandae, ipsa accusamus excepturi asperiores commodi architecto! Expedita, autem magni beatae numquam minus porro ipsum natus magnam voluptatum unde!</p>
-            <a href="/home/userHome" class="main-btn">BOOK A ROOM</a>
         </div>
+
+
     </div>
 
-    <script>
-        const mainPage = document.getElementById("main-page");
-        const height = window.innerHeight;
-        mainPage.style.height = height;
-        console.log(height);
-    </script>
+    <section id="aboutus">
+        <div style="padding:2rem;">
+            <h2 style="font-family: ' Montserrat', sans-serif; font-weight:bold">
+                About us
+            </h2>
+            <p style="font-weight:bold">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec suscipit lorem. Cras porttitor scelerisque accumsan. In cursus nec erat sit amet hendrerit. Aenean vehicula vestibulum pulvinar.
+                Mauris in lectus vitae risus maximus elementum. Aliquam id eros
+                ac ipsum dictum placerat vel in purus. Suspendisse potenti.
+            </p>
+            <p  style="font-weight:bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec suscipit lorem. Cras porttitor scelerisque accumsan. In cursus nec erat sit amet hendrerit. Aenean vehicula vestibulum pulvinar. Mauris in lectus vitae risus maximus elementum. Aliquam id eros ac ipsum dictum placerat vel in purus. Suspendisse potenti.</p>
+        </div>
+    </section>
+    <section id="contactus">
+        <div style="padding:2rem;">
+            <h2 style="font-family: ' Montserrat', sans-serif; font-weight:bold">Contact us
+            </h2>
+            <p  style="font-weight:bold"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+        </div>
+            </section>
+    <hr />
 
-</body>
-</html>
+    @section Footer{
+        <div id="copyright">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Fusce a feugiat nulla, vel efficitur augue.
+                Mauris blandit mauris ut lorem interdum volutpat.
+                Fusce semper urna.
+            </p>
+            <h5>
+                Copyright © 2022 TripNestor.com
+            </h5>
+        </div>
+
+
+
+
+    }
