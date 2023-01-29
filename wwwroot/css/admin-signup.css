@@ -1,9 +1,9 @@
 ﻿* {
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
-    /* background-color: rgb(219, 209, 190); */
     background-image: url("../images/wallpaper.jpg");
     animation: animate 16s ease infinite;
     background-size: cover;
@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     height: 100vh;
     margin: 0px 0px 50px;
 }
@@ -21,16 +21,14 @@ body {
 }
 #logo {
     width: 14rem;
-    /* display: block; */
     float: left;
     align-items: center;
     margin-left: 0px;
     margin-bottom: 0px;
-    /* margin-bottom: 1px; */
 }
 
 h1 {
-    font-family: 'Arima', cursive;
+    font-family:  sans-serif;
     color: white;
     margin: 0;
 }
@@ -43,7 +41,7 @@ p {
     font-size: 15px;
     line-height: 20px;
     letter-spacing: 0.5px;
-    font-family: 'Arima', cursive;
+    font-family:Calibri;
     margin-top: 0;
 }
 
@@ -56,9 +54,8 @@ a {
 
 button {
     border-radius: 20px;
-/*    border: 1px solid #154962;*/
     background-color: #000000;
-    font-family: 'Arima', cursive;
+    font-family: "Montserrat", Bahnschrift;
     color: #FFFFFF;
     font-size: 20px;
     padding: 12px 45px;
@@ -67,9 +64,8 @@ button {
 
 #SIGNIN {
     border-radius: 20px;
-/*    border: 1px solid #154962;
-*/    background-color:black;
-    font-family: 'Arima', cursive;
+    background-color: black;
+    font-family: "Montserrat", Bahnschrift;
     color: white;
     height: 55px;
     font-size: 20px;
@@ -78,9 +74,7 @@ button {
 }
 
     button:hover, #SIGNUP:hover, #SIGNIN:hover {
-        /* background-color: #ee9720 ; */
-        /* color: #154962 ; */
-        color: #ee9720;
+        color: white;
     }
 
 button:active {

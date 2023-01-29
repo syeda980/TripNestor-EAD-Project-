@@ -12,17 +12,14 @@ body {
     flex-direction: column;
     font-family: "Montserrat", sans-serif;
     height: 100vh;
-    /*margin: -20px 0 50px;*/
 }
 
 #logo {
     width: 191px;
-    /* display: block; */
     float: left;
     align-items: center;
     margin-left: 15px;
     margin-bottom: 12px;
-    /* margin-bottom: 1px; */
 }
 
 h2 {
@@ -35,11 +32,8 @@ h2 {
 
 p {
     font-size: 0.95rem;
-    /*font-weight: 100;*/
     line-height: 18px;
     letter-spacing: 0.1px;
-    /* margin: 0 0 10px 0; */
-    /*margin-top: 4px*/
 }
 
 a {
@@ -55,10 +49,7 @@ a {
     font-family: "Montserrat", sans-serif;
     color: white;
     font-size: 22px;
-    /*padding: 10px 35px;*/
     align-content: center;
-    /*margin-top: 58px;*/
-    /*margin-left: 91px;*/
 }
 
 #SIGNUP {

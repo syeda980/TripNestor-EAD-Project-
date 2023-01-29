@@ -3,10 +3,6 @@
 }
 
 body {
-    /* background-color: rgb(219, 209, 190); */
-    animation: animate 16s ease infinite;
-    background-size: cover;
-  /*  background-color: darkgreen;*/
     background-image: url("../images/wallpaper.jpg");
     display: flex;
     justify-content: center;
@@ -19,15 +15,13 @@ body {
 
 #logo {
     width: 14rem;
-    /* display: block; */
     float: left;
     align-items: center;
     margin-left: 15px;
     margin-bottom: 2px;
-    /* margin-bottom: 1px; */
 }
 h1 {
-    font-family: 'Arima', cursive;
+    font-family: "Montserrat", sans-serif;
     color: white;
     margin: 0;
 }
@@ -41,7 +35,6 @@ p {
     font-weight: 100;
     line-height: 20px;
     letter-spacing: 0.5px;
-    /* margin: 0 0 10px 0; */
     margin-top: 0;
 }
 
@@ -54,9 +47,8 @@ a {
 
 button {
     border-radius: 20px;
-/*    border: 1px solid #154962;
-*/    background-color: #000000;
-    font-family: 'Arima', cursive;
+*/ background-color: #000000;
+    font-family: "Montserrat", sans-serif;
     color: #FFFFFF;
     font-size: 20px;
     padding: 12px 45px;
@@ -64,9 +56,8 @@ button {
 }
 #SIGNUP {
     border-radius: 20px;
-/*    border: 1px solid #154962;
-*/    background-color: black;
-    font-family: 'Arima', cursive;
+*/ background-color: black;
+    font-family: "Montserrat", sans-serif;
     color: #FFFFFF;
     font-size: 20px;
     padding: 12px 45px;
@@ -76,19 +67,15 @@ button {
 
 #SIGNIN {
     border-radius: 20px;
-    /*  border: 1px solid #0b0c0c;*/
-    background-color:black;
-    font-family: 'Arima', cursive;
+    background-color: black;
+    font-family: "Montserrat", sans-serif;
     color: white;
     height: 55px;
     font-size: 20px;
     padding: 0px 38px;
-    /*padding: 12px 45px;*/
     transition: transform 80ms ease-in;
 }
 button:hover , #SIGNUP:hover , #SIGNIN:hover {
-    /* background-color: #ee9720 ; */
-    /* color: #154962 ; */
     color: white;
 }
 button:active {
@@ -104,8 +91,7 @@ button.ghost {
 }
 
 form {
-    /*    background-color: #FFFFFF;
-*/ background-image: linear-gradient(#000000,white);
+    background-image: linear-gradient(#000000,white);
     display: flex;
     align-items: center;
     justify-content: center;

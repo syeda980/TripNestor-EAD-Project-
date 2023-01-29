@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@600;700&family=Inconsolata&display=swap"
+    @*<link href="https://fonts.googleapis.com/css2?family=Arima:wght@600;700&family=Inconsolata&display=swap"
           rel="stylesheet">
+    *@<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="~/css/loginsignup.css">
     <link rel="stylesheet" href="~/css/signin-up.css">
     <title>LOGIN/SIGNUP</title>
@@ -18,42 +20,33 @@
             <h1>@ViewBag.Message </h1>
         </div>
     }
-    @*else
-        {
-            <div>
-                <h1>@ViewBag.Message </h1>
-            </div>
-
-        }*@
+    
     @if (ViewBag.invalid == true)
     {
 
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>@ViewBag.invalidmsg</strong>
-    <span onclick="this.parentElement.style.display='none'" ; style="font-size:1rem">&times;</span>
-
-</div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h3>@ViewBag.invalidmsg</h3>
+            <span onclick="this.parentElement.style.display='none'" ; style="font-size:1.5rem; cursor:pointer">&times;</span>
+        </div>
     }
     <div class="container" id="container" style="margin-top: 2rem">
         <div class="form-container sign-up-container">
             <form method="post" action="/user/AddUserToDB">
                 <h1>Create Account</h1>
-                <input type="text" placeholder="Name" name="userName" />
-                <input type="email" placeholder="Email" name="userEmail" />
-                <input required type="password" placeholder="Password" name="userPassword" />
+                <input type="text" placeholder="Name" required name="userName" />
+                <input type="email" placeholder="Email"required name="userEmail" />
+                <input required type="password" placeholder="Password"  name="userPassword" />
                 <button id="SIGNUP" type="submit" name="submit">Sign Up</button>
             </form>
         </div>
 
         <div class="form-container sign-in-container">
-            <!--                            <button id="backBtn" type="submit"onclick="history.back()">&larr;</button>-->
             <form method="POST" action="/user/Login">
 
                 <h1>Sign in</h1>
-                <input type="email" placeholder="Email" name="email" />
+                <input type="email" required placeholder="Email" name="email" />
                 <input type="password" required placeholder="Password" name="password" />
-                @*                <a href="/forgotPassword"> <u> Forgot your password?</u></a>
-                *@                <button id="SIGNIN" type="submit" name="submit">Sign In</button>
+                     <button id="SIGNIN" type="submit" name="submit">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -79,40 +72,34 @@
             <form method="POST" style="height: 26rem;"action="/user/Login">
                 <h1 style="color:white">TripNestor </h1>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" name="email">
+                    <input type="email" required class="form-control" placeholder="Email" name="email">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Enter password" name="password">
+                    <input type="password" required class="form-control" placeholder="Enter password" name="password">
                 </div>
-                <a href="/forgotPassword"> <u style="color:black"> Forgot your password?</u></a>
-
                 <button type="submit" id="SIGNIN" class="btn ">Sign In</button>
-                <!--        <div class="dropdown-divider"></div>-->
                 <a style="color:black" class="dropdown-item" id="MobileSignUp" onclick="displayfunc()">New Member? <u>Sign up</u></a>
 
             </form>
         </div>
     </div>
 
-    @*    {% if flag1==True %}
-    *@    <div class="MobileDisplaySignUp" id="smallscreen">
+    <div class="MobileDisplaySignUp" id="smallscreen">
         <div class="container-fluid ">
             <form method="POST" style="height: 26rem;">
                 <h1 style="color:white">TripNestor</h1>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="name" placeholder="Enter your Name" name="userName">
+                    <input type="text"required class="form-control" id="name" placeholder="Enter your Name" name="userName">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Enter your Email" name="userEmail">
+                    <input type="email"required class="form-control" id="email" placeholder="Enter your Email" name="userEmail">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter your password" name="userPassword">
+                    <input type="password"required class="form-control" id="pwd" placeholder="Enter your password" name="userPassword">
                 </div>
                 <button type="submit" class="btn ">Sign Up</button>
-                <!--        <div class="dropdown-divider"></div>-->
 
             </form>
-            @*   {% endif %}*@
         </div>
     </div>
 
@@ -124,14 +111,9 @@
         const mobileSignUpClick = document.getElementById('MobileSignUp');
         const mobileSignUp = document.getElementById('MobileDisplay');
         const mobileSignUpContainer = document.getElementById('smallscreen');
-        // mobileSignUpClick.addEventListener('click',()=>{
-        //     mobileSignUp.style.display="None";
-        //     mobileSignUpContainer.style.display="block";
-        // });
         function displayfunc() {
             mobileSignUp.style.display = "None";
             mobileSignUpContainer.style.display = "block";
-            console.log("abcdefgh")
 
         }
         signUpButton.addEventListener('click', () => {

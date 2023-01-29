@@ -9,7 +9,6 @@ E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\bin\Debug\net5.0\ref\TripNestor.
 E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\bin\Debug\net5.0\TripNestor.pdb
 E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\bin\Debug\net5.0\TripNestor.Views.dll
 E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\bin\Debug\net5.0\TripNestor.Views.pdb
-E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\TripNestor.csproj.AssemblyReference.cache
 E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\TripNestor.GeneratedMSBuildEditorConfig.editorconfig
 E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\TripNestor.AssemblyInfoInputs.cache
 E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\TripNestor.AssemblyInfo.cs
