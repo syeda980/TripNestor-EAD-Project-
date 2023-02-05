@@ -37,8 +37,6 @@ namespace TripNestor.Models
             {
                 entity.ToTable("Admin");
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasMaxLength(100)
@@ -58,8 +56,6 @@ namespace TripNestor.Models
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable("User");
-
-                entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.Email)
                     .IsRequired()
