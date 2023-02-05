@@ -10,7 +10,7 @@
           crossorigin="anonymous" />
     <!-- custom css -->
     <link rel="stylesheet" href="~/css/adminHome.css" />
-
+    <link rel="stylesheet" href="~/css/addplace.css" />
 
 </head>
 
@@ -21,14 +21,14 @@
             <a href="/home/index" class="nav-link h3 text-white my-2">
                 TripNestor
             </a>
-            <li href="#" class="nav-link">
-                <span class="mx-2">Home</span>
+            <li class="nav-link">
+                <a href="/admin/adminHome" class="mx-2">Home</a>
+            </li>
+            <li href="/Admin/addPlace" class="nav-link">
+                <a href="/admin/addPlace" class="mx-2">Add a Place</a>
             </li>
             <li href="#" class="nav-link">
-                <span class="mx-2">Add a hotel</span>
-            </li>
-            <li href="#" class="nav-link">
-                <span class="mx-2">Add a Place</span>
+                <span class="mx-2">Add a Hotel</span>
             </li>
             <li href="#" class="nav-link">
                 <span class="mx-2">Update Hotel</span>
@@ -41,11 +41,15 @@
             </li>
         </ul>
 
+
+
+
         <span class="nav-link h4 w-100 mb-5">
             @*            <button type="button" class="btn btn-dark btn-lg">Logout</button>
-            *@            <a href="/admin/logout" class="link-dark">Logout</a>
+            *@            <a href="/admin/logout" class="link-dark" style="color:white; text-decoration:none">Logout</a>
         </span>
     </div>
+  
 
-</body>
+    </body>
 </html>

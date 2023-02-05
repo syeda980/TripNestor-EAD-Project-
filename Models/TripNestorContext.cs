@@ -19,6 +19,10 @@ namespace TripNestor.Models
 
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<Place> Places { get; set; }
+        public virtual DbSet<PlaceImage> PlaceImages { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

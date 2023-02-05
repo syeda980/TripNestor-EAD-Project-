@@ -10,7 +10,7 @@ namespace TripNestor.Controllers
 {
     public class AdminController : Controller
     {
-        TripNestorContext tripNestorContext = new TripNestorContext();
+       // TripNestorContext tripNestorContext = new TripNestorContext();
         public IActionResult Index()
         {
             return View();
@@ -21,8 +21,9 @@ namespace TripNestor.Controllers
         }
         public ActionResult Login(Admin admin)
         {
-            var userExist = tripNestorContext.Admins.FirstOrDefault(u => u.Email == admin.Email && u.Password == admin.Password);
-
+            // var userExist = tripNestorContext.Admins.FirstOrDefault(u => u.Email == admin.Email && u.Password == admin.Password);
+            AdminRepository adminRepository = new AdminRepository();
+            var userExist = adminRepository.checkAdminExist(admin);
             if (userExist != null)
             {
                 //cookies management 
@@ -42,6 +43,7 @@ namespace TripNestor.Controllers
             if(HttpContext.Request.Cookies.ContainsKey("adminEmail")
                 && HttpContext.Request.Cookies.ContainsKey("adminPassword"))
             {
+                ViewBag.flag1 = true;
                 return View("adminHome");
             }
             else
@@ -57,6 +59,14 @@ namespace TripNestor.Controllers
             HttpContext.Response.Cookies.Delete("adminPassword");
             return View("Signin");
 
+
+        }
+        public ViewResult addPlace()
+        {
+
+            
+
+            return View("addPlace");
 
         }
     }
