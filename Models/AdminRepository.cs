@@ -13,5 +13,10 @@ namespace TripNestor.Models
             var userExist = tripNestorContext.Admins.FirstOrDefault(u => u.Email == admin.Email && u.Password == admin.Password);
             return userExist;
         }
+        public int getAdminId(string adminEmail)
+        {
+            var uID = tripNestorContext.Admins.Where(u => u.Email == adminEmail).Select(u=>u.Id).First();
+            return uID;
+        }
     }
 }

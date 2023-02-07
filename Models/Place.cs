@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace TripNestor.Models
 {
-    public class Place
+    public class Place : FullAuditModel
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int PlaceId { get; set; }
         public string PlaceName { get; set; }
         public string Description { get; set; }
@@ -19,5 +19,13 @@ namespace TripNestor.Models
 
         [ForeignKey("CityId")]
         public virtual City City { get; set; }
+
+        [Display(Name = "Admin")]
+        public virtual int AdminId { get; set; }
+
+        [ForeignKey("AdminId")]
+        public virtual Admin Admin { get; set; }
+
+        public virtual List<PlaceImage> PlaceImages { get; set; } = new List<PlaceImage>();
     }
 }

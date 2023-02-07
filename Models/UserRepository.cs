@@ -7,5 +7,6 @@ namespace TripNestor.Models
 {
     public class UserRepository
     {
+
     }
 }

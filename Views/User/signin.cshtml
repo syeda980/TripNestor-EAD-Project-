@@ -1,13 +1,12 @@
-﻿
+﻿<!--to add tag helpers-->
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @*<link href="https://fonts.googleapis.com/css2?family=Arima:wght@600;700&family=Inconsolata&display=swap"
-          rel="stylesheet">
-    *@<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="~/css/loginsignup.css">
     <link rel="stylesheet" href="~/css/signin-up.css">
@@ -30,7 +29,7 @@
     }
     <div class="container" id="container" style="margin-top: 2rem">
         <div class="form-container sign-up-container">
-            <form method="post" action="/user/AddUserToDB">
+            <form method="post" asp-action="AddUserToDB" asp-controller="user">
                 <h1>Create Account</h1>
                 <input type="text" placeholder="Name" required name="userName" />
                 <input type="email" placeholder="Email" required name="userEmail" />
@@ -40,7 +39,7 @@
         </div>
 
         <div class="form-container sign-in-container">
-            <form method="POST" action="/user/Login">
+            <form method="POST" asp-action="Login" asp-controller="user">
 
                 <h1>Sign in</h1>
                 <input type="email" required placeholder="Email" name="email" />
@@ -68,7 +67,7 @@
     </div>
     <div class="MobileDisplay" id="MobileDisplay">
         <div class="container-fluid">
-            <form method="POST" style="height: 26rem;" action="/user/Login">
+            <form method="POST" style="height: 26rem;"asp-action="Login" asp-controller="user">
                 <h1 style="color:white">TripNestor </h1>
                 <div class="form-group">
                     <input type="email" required class="form-control" placeholder="Email" name="email">
@@ -85,7 +84,7 @@
 
     <div class="MobileDisplaySignUp" id="smallscreen">
         <div class="container-fluid ">
-            <form method="POST" style="height: 26rem;">
+            <form method="POST" style="height: 26rem;"asp-action="AddUserToDB" asp-controller="user">
                 <h1 style="color:white">TripNestor</h1>
                 <div class="form-group">
                     <input type="text" required class="form-control" id="name" placeholder="Enter your Name" name="userName">

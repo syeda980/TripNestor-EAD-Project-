@@ -58,16 +58,13 @@ namespace TripNestor.Controllers
             HttpContext.Response.Cookies.Delete("adminEmail");
             HttpContext.Response.Cookies.Delete("adminPassword");
             return View("Signin");
-
-
         }
-        public ViewResult addPlace()
+        public IActionResult addPlace()
         {
+            return RedirectToAction("addPlace", "Place");
 
-            
-
-            return View("addPlace");
 
         }
+      
     }
 }

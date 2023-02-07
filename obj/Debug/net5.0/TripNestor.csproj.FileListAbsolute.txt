@@ -74,4 +74,5 @@ E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\Razor\Views\_Vi
 E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\Razor\Views\User\userHome.cshtml.g.cs
 E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\Razor\Views\Admin\adminHome.cshtml.g.cs
 E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\TripNestor.csproj.AssemblyReference.cache
-E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\Razor\Views\Admin\addPlace.cshtml.g.cs
+E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\Razor\Views\Shared\_PartialFooter.cshtml.g.cs
+E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\obj\Debug\net5.0\Razor\Views\Place\addPlace.cshtml.g.cs

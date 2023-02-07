@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace TripNestor.Models
 {
-    public class PlaceImage
+    public class PlaceImage : FullAuditModel
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        //public int Id { get; set; }
         public string ImagePath { get; set; }
 
         [Display(Name = "Place")]
@@ -18,6 +18,5 @@ namespace TripNestor.Models
 
         [ForeignKey("PlaceId")]
         public virtual Place Place { get; set; }
-
     }
 }

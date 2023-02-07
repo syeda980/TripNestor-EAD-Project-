@@ -5,11 +5,12 @@ using System.Collections.Generic;
 
 namespace TripNestor.Models
 {
-    public partial class Admin
+    public class Admin : FullAuditModel
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public virtual List<Place> Places { get; set; } = new List<Place>();
     }
 }

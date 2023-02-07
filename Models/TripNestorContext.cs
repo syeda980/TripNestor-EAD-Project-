@@ -22,6 +22,7 @@ namespace TripNestor.Models
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Place> Places { get; set; }
         public virtual DbSet<PlaceImage> PlaceImages { get; set; }
+        public virtual DbSet<Hotel> Hotels { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
