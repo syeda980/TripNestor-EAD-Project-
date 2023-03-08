@@ -2,7 +2,7 @@
 
 namespace TripNestor.Migrations
 {
-    public partial class auditHotelModelFK : Migration
+    public partial class createHotel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

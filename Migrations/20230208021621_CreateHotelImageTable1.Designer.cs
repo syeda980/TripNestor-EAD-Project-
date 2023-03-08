@@ -10,8 +10,8 @@ using TripNestor.Models;
 namespace TripNestor.Migrations
 {
     [DbContext(typeof(TripNestorContext))]
-    [Migration("20230207220207_auditHotelModelFK")]
-    partial class auditHotelModelFK
+    [Migration("20230208021621_CreateHotelImageTable1")]
+    partial class CreateHotelImageTable1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -105,8 +105,10 @@ namespace TripNestor.Migrations
 
             modelBuilder.Entity("TripNestor.Models.Hotel", b =>
                 {
-                    b.Property<string>("HotelName")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("HotelId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("AdminId")
                         .HasColumnType("int");
@@ -119,6 +121,9 @@ namespace TripNestor.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("HotelName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Id")
                         .HasColumnType("int");
@@ -135,7 +140,7 @@ namespace TripNestor.Migrations
                     b.Property<int>("NoOfRooms")
                         .HasColumnType("int");
 
-                    b.HasKey("HotelName");
+                    b.HasKey("HotelId");
 
                     b.HasIndex("AdminId");
 

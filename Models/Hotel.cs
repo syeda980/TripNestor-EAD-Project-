@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TripNestor.Models
 {
-    public class Hotel : FullAuditModel
+    public class Hotel:FullAuditModel
     {
         [Key]
-      //  public int Id { get; set; }
-        public string ? HotelName { get; set; }
+        public int HotelId { get; set; }
+        public string? HotelName { get; set; }
         public int NoOfRooms { get; set; }
 
         [Display(Name = "City")]
@@ -25,6 +25,8 @@ namespace TripNestor.Models
 
         [ForeignKey("AdminId")]
         public virtual Admin Admin { get; set; }
+        public virtual List<HotelImages> HotelImages { get; set; } = new List<HotelImages>();
+
 
     }
 }

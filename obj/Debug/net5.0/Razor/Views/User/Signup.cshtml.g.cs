@@ -13,13 +13,16 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"85a44d0ed297730bf81931fde9d357122c9fc796", @"/Views/User/Signup.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"23ac09be4bcfaa7f9829a01d1a134874eaae1f3b", @"/Views/_ViewImports.cshtml")]
     public class Views_User_Signup : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("href", new global::Microsoft.AspNetCore.Html.HtmlString("~/css/style.css"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", new global::Microsoft.AspNetCore.Html.HtmlString("text/css"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_3 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("main-page"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
-        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_4 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("main-page"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_3 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("onsubmit", new global::Microsoft.AspNetCore.Html.HtmlString("return validateForm()"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_4 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("name", new global::Microsoft.AspNetCore.Html.HtmlString("form"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_5 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("main-page"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_6 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("main-page"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         #line hidden
         #pragma warning disable 0649
         private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
@@ -43,11 +46,13 @@ namespace AspNetCore
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.HeadTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_HeadTagHelper;
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper;
         private global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper;
+        private global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "85a44d0ed297730bf81931fde9d357122c9fc7964618", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "85a44d0ed297730bf81931fde9d357122c9fc7965771", async() => {
                 WriteLiteral(@"
     <meta charset=""UTF-8"" />
     <meta http-equiv=""X-UA-Compatible"" content=""IE=edge"" />
@@ -57,7 +62,7 @@ namespace AspNetCore
     <link href=""https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap""
           rel=""stylesheet"" />
     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "85a44d0ed297730bf81931fde9d357122c9fc7965348", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "85a44d0ed297730bf81931fde9d357122c9fc7966501", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -85,35 +90,41 @@ namespace AspNetCore
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "85a44d0ed297730bf81931fde9d357122c9fc7967350", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "85a44d0ed297730bf81931fde9d357122c9fc7968503", async() => {
+                WriteLiteral("\r\n    <a class=\"logo\" href=\"/home/index\"><h1>TripNestor</h1></a>\r\n    <div class=\"signup-page\">\r\n        <div class=\"signup-form\">\r\n            <h1>TripNestor</h1>\r\n            ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "85a44d0ed297730bf81931fde9d357122c9fc7968952", async() => {
+                    WriteLiteral("\r\n                <div class=\"input-field\">\r\n                    <label>Name</label>\r\n                    <input type=\"text\"");
+                    BeginWriteAttribute("value", " value=\"", 991, "\"", 999, 0);
+                    EndWriteAttribute();
+                    WriteLiteral(" name=\"name\" />\r\n                </div>\r\n                <div class=\"input-field\">\r\n                    <label>Email</label>\r\n                    <input type=\"email\"");
+                    BeginWriteAttribute("value", " value=\"", 1165, "\"", 1173, 0);
+                    EndWriteAttribute();
+                    WriteLiteral(" name=\"mail\" />\r\n                </div>\r\n                <div class=\"input-field\">\r\n                    <label>Confirm Email</label>\r\n                    <input type=\"email\"");
+                    BeginWriteAttribute("value", " value=\"", 1347, "\"", 1355, 0);
+                    EndWriteAttribute();
+                    WriteLiteral(" name=\"cmail\" />\r\n                </div>\r\n                <div class=\"input-field\">\r\n                    <label>Password</label>\r\n                    <input type=\"password\"");
+                    BeginWriteAttribute("value", " value=\"", 1528, "\"", 1536, 0);
+                    EndWriteAttribute();
+                    WriteLiteral(" name=\"password\" />\r\n                </div>\r\n                <div class=\"input-field\">\r\n                    <label>Confirm Password</label>\r\n                    <input type=\"password\"");
+                    BeginWriteAttribute("value", " value=\"", 1720, "\"", 1728, 0);
+                    EndWriteAttribute();
+                    WriteLiteral(" name=\"cpassword\" />\r\n                </div>\r\n                <p id=\"alert\"></p>\r\n                <button class=\"sub-btn\" id=\"btn\" type=\"submit\">Sign Up</button>\r\n            ");
+                }
+                );
+                __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper>();
+                __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper);
+                __Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper>();
+                __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper);
+                __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_3);
+                __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_4);
+                await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
+                if (!__tagHelperExecutionContext.Output.IsContentModified)
+                {
+                    await __tagHelperExecutionContext.SetOutputContentAsync();
+                }
+                Write(__tagHelperExecutionContext.Output);
+                __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral(@"
-    <a class=""logo"" href=""/home/index""><h1>TripNestor</h1></a>
-    <div class=""signup-page"">
-        <div class=""signup-form"">
-            <h1>TripNestor</h1>
-            <form onsubmit=""return validateForm()"" name=""form"">
-                <div class=""input-field"">
-                    <label>Name</label>
-                    <input type=""text""");
-                BeginWriteAttribute("value", " value=\"", 991, "\"", 999, 0);
-                EndWriteAttribute();
-                WriteLiteral(" name=\"name\" />\r\n                </div>\r\n                <div class=\"input-field\">\r\n                    <label>Email</label>\r\n                    <input type=\"email\"");
-                BeginWriteAttribute("value", " value=\"", 1165, "\"", 1173, 0);
-                EndWriteAttribute();
-                WriteLiteral(" name=\"mail\" />\r\n                </div>\r\n                <div class=\"input-field\">\r\n                    <label>Confirm Email</label>\r\n                    <input type=\"email\"");
-                BeginWriteAttribute("value", " value=\"", 1347, "\"", 1355, 0);
-                EndWriteAttribute();
-                WriteLiteral(" name=\"cmail\" />\r\n                </div>\r\n                <div class=\"input-field\">\r\n                    <label>Password</label>\r\n                    <input type=\"password\"");
-                BeginWriteAttribute("value", " value=\"", 1528, "\"", 1536, 0);
-                EndWriteAttribute();
-                WriteLiteral(" name=\"password\" />\r\n                </div>\r\n                <div class=\"input-field\">\r\n                    <label>Confirm Password</label>\r\n                    <input type=\"password\"");
-                BeginWriteAttribute("value", " value=\"", 1720, "\"", 1728, 0);
-                EndWriteAttribute();
-                WriteLiteral(@" name=""cpassword"" />
-                </div>
-                <p id=""alert""></p>
-                <button class=""sub-btn"" id=""btn"" type=""submit"">Sign Up</button>
-            </form>
             <span class=""link-signin""><a href=""/user/signin"">Already have an account?</a></span>
         </div>
     </div>
@@ -131,10 +142,10 @@ namespace AspNetCore
                   if (email != cemail && password === cpassword) {
                       document.getElementById(""alert"").innerText = ""Emails are not same"";
                       return false;
-   ");
-                WriteLiteral(@"               } else if (email === cemail && password != cpassword) {
+                  } else if (email === cemail && password != cpassword) {
                       document.getElementById(""alert"").innerText =
-                          ""Passwords are not same"";
+                          ""Passwords are n");
+                WriteLiteral(@"ot same"";
                       return false;
                   } else if (email != cemail && password != cpassword) {
                       document.getElementById(""alert"").innerText =
@@ -157,8 +168,8 @@ namespace AspNetCore
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper>();
             __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper);
-            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_3);
-            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_4);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_5);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_6);
             await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
             if (!__tagHelperExecutionContext.Output.IsContentModified)
             {

@@ -1,7 +1,45 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<h1>Hiii welcomeeee -
-    </h1>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="~/css/adminHome.css" />
+    <link rel="stylesheet" href="~/css/addplace.css" />
+
+</head>
+
+<body>
+    <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column"
+         id="sidebar">
+        <ul class="nav flex-column text-white w-100">
+            <a href="/home/index" class="nav-link h3 text-white my-2">
+                TripNestor
+            </a>
+            <li class="nav-link">
+                <a href="/User/UserHome" class="btn-dark mx-2" style="text-decoration: none; background-color: #100901">Home</a>
+            </li>
+            <li href="/user/searchPlace" class="nav-link">
+                <a href="/user/searchPlace" class="btn-dark mx-2" style="text-decoration: none; background-color: #100901">Search Place</a>
+            </li>
+            <li href="/user/searchHotel" class="nav-link">
+                <a href="/user/searchHotel" class="btn-dark mx-2" style="text-decoration: none; background-color: #100901">Search Hotel</a>
+            </li>
+          @*  <li href="" class="nav-link">
+                <a href="" class="btn-dark mx-2" style="text-decoration: none; background-color: #100901">Make Reservation</a>
+            </li>
+            <li href="" class="nav-link">
+                <a href="" class="btn-dark mx-2" style="text-decoration: none; background-color: #100901">Give Review</a>
+            </li>*@
+        </ul>
+        <span class="nav-link h4 w-100 mb-5">
+            <a href="/user/logout" class="link-dark" style="color:white; text-decoration:none">Logout</a>
+        </span>
+    </div>
+</body>
+</html>

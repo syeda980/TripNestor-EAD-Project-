@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TripNestor.Models.Interfaces;
 
 namespace TripNestor.Models
 {
-    public class AdminRepository
+    public class AdminRepository:IAdmin
     {
         TripNestorContext tripNestorContext = new TripNestorContext();
         public Admin checkAdminExist(Admin admin)

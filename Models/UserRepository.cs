@@ -7,6 +7,7 @@ namespace TripNestor.Models
 {
     public class UserRepository
     {
-
+        TripNestorContext tripNestorContext = new TripNestorContext();
+      
     }
 }

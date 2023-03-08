@@ -13,6 +13,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b75f4bc6c326e0be1cc8c0d63c78fd944fc66716", @"/Views/Shared/_Layout.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"23ac09be4bcfaa7f9829a01d1a134874eaae1f3b", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -41,7 +42,7 @@ namespace AspNetCore
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b75f4bc6c326e0be1cc8c0d63c78fd944fc667162735", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b75f4bc6c326e0be1cc8c0d63c78fd944fc667162899", async() => {
                 WriteLiteral(@"
     <link rel=""stylesheet"" href=""https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"" integrity=""sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"" crossorigin=""anonymous"">
     <meta charset=""UTF-8"">
@@ -99,7 +100,7 @@ namespace AspNetCore
             </li>
             <li>");
             WriteLiteral("\r\n                <a style=\"color:white\" href=\"/home/welcome\" class=\"signup-btn\">SIGN IN</a>\r\n\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</nav>\r\n\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b75f4bc6c326e0be1cc8c0d63c78fd944fc667166800", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b75f4bc6c326e0be1cc8c0d63c78fd944fc667166964", async() => {
                 WriteLiteral("\r\n\r\n\r\n    ");
 #nullable restore
 #line 61 "E:\semester 7\EAD\Project\TRIPNESTOR\TripNestor\Views\Shared\_Layout.cshtml"

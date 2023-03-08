@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Search Place</title>
+
+</head>
+<body style="background: linear-gradient(#000000,#799F0C); margin-top: 10rem; align-items: center ">
+    <div class="container h-100" style="color:white;border:2px solid black; background-color:white">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+                <!-- Form -->
+                <form class="form-example" action="/user/SearchAplace" method="post"  style="margin-top:1rem">
+                    <h1 style="color:black; text-align:center">TripNestor</h1>
+                    <h5 style="color:black; text-align:center">Search Place</h5>
+                    <!-- Input fields -->
+                    <div class="form-group" id="smth">
+                        <label for="city">City:</label>
+                        <select name="cities" id="dropdown">
+                            <option value="1">Lahore</option>
+                            <option value="2">Karachi</option>
+                            <option value="3">Islamabad</option>
+                            <option value="4">Swat</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <input type="text" class="form-control " id="Pname"
+                               placeholder=" Type Place Name Here..." name="PName">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-lg btn-dark "style="margin-top: 2rem; margin-bottom: 3rem">Search</button>
+                </form>
+            </div>
+        </div>
+      
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

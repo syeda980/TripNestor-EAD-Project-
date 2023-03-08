@@ -103,8 +103,10 @@ namespace TripNestor.Migrations
 
             modelBuilder.Entity("TripNestor.Models.Hotel", b =>
                 {
-                    b.Property<string>("HotelName")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("HotelId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("AdminId")
                         .HasColumnType("int");
@@ -117,6 +119,9 @@ namespace TripNestor.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("HotelName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Id")
                         .HasColumnType("int");
@@ -133,13 +138,49 @@ namespace TripNestor.Migrations
                     b.Property<int>("NoOfRooms")
                         .HasColumnType("int");
 
-                    b.HasKey("HotelName");
+                    b.HasKey("HotelId");
 
                     b.HasIndex("AdminId");
 
                     b.HasIndex("CityId");
 
                     b.ToTable("Hotels");
+                });
+
+            modelBuilder.Entity("TripNestor.Models.HotelImages", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedByUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("HotelId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImagePath")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModifiedUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HotelId");
+
+                    b.ToTable("HotelImages");
                 });
 
             modelBuilder.Entity("TripNestor.Models.Place", b =>
@@ -288,6 +329,17 @@ namespace TripNestor.Migrations
                     b.Navigation("City");
                 });
 
+            modelBuilder.Entity("TripNestor.Models.HotelImages", b =>
+                {
+                    b.HasOne("TripNestor.Models.Hotel", "Hotel")
+                        .WithMany("HotelImages")
+                        .HasForeignKey("HotelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hotel");
+                });
+
             modelBuilder.Entity("TripNestor.Models.Place", b =>
                 {
                     b.HasOne("TripNestor.Models.Admin", "Admin")
@@ -328,6 +380,11 @@ namespace TripNestor.Migrations
                     b.Navigation("Hotels");
 
                     b.Navigation("Places");
+                });
+
+            modelBuilder.Entity("TripNestor.Models.Hotel", b =>
+                {
+                    b.Navigation("HotelImages");
                 });
 
             modelBuilder.Entity("TripNestor.Models.Place", b =>

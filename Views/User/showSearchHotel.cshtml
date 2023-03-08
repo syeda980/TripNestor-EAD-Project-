@@ -1,0 +1,51 @@
+﻿@model TripNestor.Models.Hotel
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Search Result</title>
+</head>
+<body style="background-color:black">
+    @if (@ViewBag.flag == true)
+    {
+
+        <h2 style="color:white">Search Results....</h2>
+        <br />
+        <h1 style="color:white">@Model.HotelName</h1>
+        <p style="color:white">@Model.NoOfRooms</p>
+        <h1 style="color:white">Images</h1>
+    }
+    <div>
+        @if (@ViewBag.flag == true)
+        {
+            @foreach (var place in Model.HotelImages)
+            {
+                <div>
+                    <img src="~/uploads/Hotels/@ViewBag.cityName/@place.ImagePath" style="height:30rem; width:38rem" />
+                </div>
+                <br />
+            }
+            @*<div class="container" style="margin-left: 32rem; margin-bottom: 5rem">
+                <a class="btn btn-group-lg btn-info " href="" style="font-size:20px">Give Review</a>
+            </div>
+*@
+        }
+        @if (@ViewBag.flag == false)
+        {
+            <h1 style="color:white">@ViewBag.error</h1>
+        }
+
+    </div>
+    <div class="container" style="margin-left: 32rem;">
+        <a class="btn btn-group-lg btn-info " asp-controller="Hotel" asp-action="ViewAll" asp-route-id="@Model.CityId" style="margin-bottom:2rem;font-size:20px">View All</a>
+    </div>
+
+</body>
+</html>
+
